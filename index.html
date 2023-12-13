@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammad Basheera Sultana Personal Website</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+    <style>
+	
+
+        :root {
+            --primary-color: #a855f7;
+    --primary-color-dark: #9333ea;
+            --secondary-color: #E75480;
+            --text-dark: #ffffff;
+            --text-light: #6b7280;
+            --extra-light: #faf5ff;
+            --max-width: 1200px;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+        }
+
+        nav {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color:  #192841;
+            z-index: 99;
+        }
+
+        .nav__content {
+            max-width: var(--max-width);
+            margin: auto;
+            padding: 1.5rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+
+        nav .logo a {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            transition: 0.3s;
+        }
+
+        nav .logo a:hover {
+            color: var(--primary-color-dark);
+        }
+
+        nav .checkbox {
+            display: none;
+        }
+
+        nav input {
+            display: none;
+        }
+
+        nav .checkbox i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            cursor: pointer;
+        }
+	
+
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            list-style: none;
+            transition: left 0.3s;
+        }
+
+        ul li a {
+            padding: 0.5rem 1rem;
+            border: 2px solid transparent;
+            text-decoration: none;
+            font-weight: 600;
+            color: var(--text-dark);
+            transition: 0.3s;
+        }
+
+        ul li a:hover {
+            border-top-color: var(--secondary-color);
+            border-bottom-color: var(--secondary-color);
+            color: var(--secondary-color);
+        }
+
+        .section {
+            background-color: var(--extra-light);
+        }
+
+        .section__container {
+            min-height: 100vh;
+            max-width: var(--max-width);
+            margin: auto;
+            padding: 1rem;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4rem;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .subtitle {
+            letter-spacing: 2px;
+            color: var(--text-light);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .title {
+            font-size: 2.5rem;
+            font-weight: 400;
+            line-height: 3rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .title span {
+            font-weight: 600;
+        }
+
+        .description {
+            line-height: 1.5rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .action__btns {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .action__btns button {
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            padding: 1rem 2rem;
+            outline: none;
+            border: 2px solid var(--primary-color);
+            border-radius: 10px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .hire__me {
+            background-color: var(--primary-color);
+            color: #ffffff;
+        }
+
+        .hire__me:hover {
+            background-color: var(--primary-color-dark);
+        }
+
+        .portfolio {
+            color: var(--primary-color);
+        }
+
+        .portfolio:hover {
+            background-color: var(--primary-color-dark);
+            color: #ffffff;
+        }
+
+        .image {
+            display: grid;
+            place-items: center;
+        }
+
+        .image img {
+            width: min(25rem, 90%);
+            border-radius: 100%;
+        }
+
+        @media (max-width: 750px) {
+            nav .checkbox {
+                display: block;
+            }
+
+            ul {
+                position: absolute;
+                width: 100%;
+                height: calc(100vh - 85px);
+                left: -100%;
+                top: 85px;
+                background-color: var(--extra-light);
+                flex-direction: column;
+                justify-content: center;
+                gap: 3rem;
+            }
+
+            nav #check:checked ~ ul {
+                left: 0;
+            }
+
+            ul li a {
+                font-size: 1.25rem;
+            }
+
+            .section__container {
+                padding: 10rem 1rem 5rem 1rem;
+                text-align: center;
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .image {
+                grid-area: 1/1/2/2;
+            }
+
+            .action__btns {
+                margin: auto;
+            }
+        }
+.image-home img {
+    width: min(16rem, 100%); /* Adjust the width as needed */
+    border-radius: 100%;
+}
+
+	#about .image img {
+    width: min(25rem, 90%);
+    border-radius: 10px; /* Change border-radius to create a square shape */
+}
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav__content">
+            <div class="logo">
+                <a href="#home">Mohammad Basheera Sultana</a>
+            </div>
+            <input type="checkbox" id="check" class="checkbox">
+            <i class="fas fa-bars"></i>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#interests">Interests</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+<section id="home" class="home section">
+    <div class="section__container">
+        <div class="content">
+            <h2 class="subtitle">Welcome to My Personal Website</h2>
+            <p>Hello, I'm Basheera Sultana, a passionate Computer Science Student. Explore my journey, skills, and interests as you navigate through this site.</p><br>
+             <div class="action__btns">
+                <a href="https://www.linkedin.com/in/mohammad-basheera-sultana-52b3b6251/" target="_blank">
+                    <img src="linkedin.png" alt="LinkedIn Logo" width="30" height="30">
+                </a>
+                <a href="https://github.com/MohammadBasheera" target="_blank">
+                    <img src="github.png" alt="GitHub Logo" width="30" height="30">
+                </a>
+            </div>
+        </div>
+        <div class="image image-home">
+             <img src="pic.jpg" alt="Its me">
+        </div>
+    </div>
+</section>
+
+    <section id="about" class="about section">
+        <div class="section__container">
+            <div class="content">
+                <h2 class="subtitle">About Me</h2>
+                <p>Hello there! I'm Basheera Sultana, a driven CSE student specializing in Artificial Intelligence and Machine Learning at Gayatri Vidya Parishad College Of Engineering For Women. Fueled by a curiosity to explore the dynamic intersection of technology and creativity, I thrive on embracing challenges and cultivating a problem-solving mindset.</p>
+                <p>I've been passionate about the possibilities that technology offers and also about leveraging technology for positive change. </p>
+                <p>I'm on a continuous quest to expand my knowledge and skills in the ever-evolving field of AI and ML.</p>
+            </div>
+            <div class="image">
+                <img src="sample.jpg" alt="course">
+            </div>
+        </div>
+    </section>
+
+    <section id="resume" class="resume section">
+        <div class="section__container">
+            <div class="content">
+                <h2 class="subtitle">Resume</h2>
+                <p><strong>Education:</strong> Bachelor of Science in Computer Science Engineering (AI&ML) - GAYATRI VIDYA PARISHAD COLLEGE OF ENGINEERING FOR WOMEN.</p>
+                <p> -Internship -Cyber Security Analyst - Cisco AICTE Virtual Internship Program  </p>
+    <p>- Google cloud Study Jams Member
+    <p>- Python Web Development Intern -HMI Engineering Services</p>
+                <p><strong>Skills:</strong></p>
+                <p>-Programming languages: Python, C</p>
+                <p>-Machine Learning: TensorFlow, scikit-learn</p>
+                <p>-Web technologies: HTML, CSS</p>
+                <p>-Cloud Computing</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="interests" class="interests section">
+        <div class="section__container">
+            <div class="content">
+                <h2 class="subtitle">Interests</h2>
+                <p>-I am deeply interested in exploring new technologies and their applications, contributing to open-source projects, and creating innovative solutions to real-world problems.</p>
+                <p>-Passionate about the dynamic convergence of data, artificial intelligence, machine learning, and cloud computing. My interest lies in unlocking the potential of data to drive innovation through AI-powered insights, machine learning models, and efficient cloud-based solutions.</p>
+                <p>-Committed to ethical data practices, I thrive on practical applications and continuous skill refinement in these transformative fields. Let's connect and explore the boundless possibilities of data-driven impact, AI, machine learning, and cloud computing.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact section">
+        <div class="section__container">
+            <div class="content">
+                <h2 class="subtitle">Contact</h2>
+<p>Email: <a href="mailto:mohammadbasheera06@gmail.com">mohammadbasheera06@gmail.com</a></p>
+               <p>LinkedIn: <a href="https://www.linkedin.com/in/mohammad-basheera-sultana-52b3b6251/">LinkedIn Profile</a></p>
+    <p>GitHub: <a href="https://github.com/MohammadBasheera">GitHub Profile</a></p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
